@@ -1,3 +1,4 @@
+// Works Carousel
 document.addEventListener('DOMContentLoaded', function () {
 	const track = document.querySelector('.slider-track');
 	const items = document.querySelectorAll('.slider-item');
@@ -5,7 +6,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	const next = document.querySelector('.next');
 	const itemWidth = items[0].offsetWidth + 20;
 
-	// Clone items for infinite loop effect
 	items.forEach((item) => {
 		track.appendChild(item.cloneNode(true));
 	});
@@ -41,3 +41,22 @@ document.addEventListener('DOMContentLoaded', function () {
 		}, 10);
 	});
 });
+
+// Title Typing Effect
+function runTypingEffect() {
+	const text = 'I am Giannis Panou.';
+	const typingElement = document.getElementById('typing-text');
+	const typingDelay = 100;
+
+	typeText(text, typingElement, typingDelay);
+}
+
+function typeText(text, typingElement, delay) {
+	for (let i = 0; i < text.length; i++) {
+		setTimeout(() => {
+			typingElement.textContent += text.charAt(i);
+		}, delay * i);
+	}
+}
+
+document.addEventListener('DOMContentLoaded', runTypingEffect);

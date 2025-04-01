@@ -1,16 +1,13 @@
 .slider-container {
-	background-color: #141414 !important;
-	display: flex !important;
-	justify-content: center !important;
-	align-items: center !important;
-	height: 100vh !important;
-	overflow: hidden !important;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
 }
 
 .slider-container .slider {
 	position: relative;
-	width: 80%;
-	max-width: 1000px;
+	width: 100%;
 	overflow: hidden;
 }
 
@@ -20,7 +17,7 @@
 }
 
 .slider-container .slider-item {
-	min-width: 200px;
+	min-width: 400px;
 	height: 300px;
 	margin: 0 10px;
 	border-radius: 10px;
