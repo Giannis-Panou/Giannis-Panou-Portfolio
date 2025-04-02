@@ -42,21 +42,45 @@ document.addEventListener('DOMContentLoaded', function () {
 	});
 });
 
-// Title Typing Effect
-function runTypingEffect() {
-	const text = 'I am Giannis Panou.';
+// Title Animation
+document.addEventListener('DOMContentLoaded', function () {
 	const typingElement = document.getElementById('typing-text');
-	const typingDelay = 100;
+	const words = [
+		'Giannis.',
+		'Ioannis.',
+		'John.',
+		'Yannis.',
+		'Johannes.',
+		'Whatever.',
+	];
+	const text = "Hello there. I'm Giannis.";
+	const typingDelay = 50;
+	let wordIndex = 0;
 
-	typeText(text, typingElement, typingDelay);
-}
-
-function typeText(text, typingElement, delay) {
-	for (let i = 0; i < text.length; i++) {
-		setTimeout(() => {
-			typingElement.textContent += text.charAt(i);
-		}, delay * i);
+	function typeText(text, element, delay) {
+		for (let i = 0; i < text.length; i++) {
+			setTimeout(() => {
+				element.textContent += text.charAt(i);
+			}, delay * i);
+		}
 	}
-}
 
-document.addEventListener('DOMContentLoaded', runTypingEffect);
+	function changeText() {
+		const staticText = "Hello there. I'm ";
+
+		setTimeout(() => {
+			wordIndex = (wordIndex + 1) % words.length;
+			typingElement.textContent = staticText + words[wordIndex];
+		}, 500);
+	}
+
+	function startAnimations() {
+		typeText(text, typingElement, typingDelay);
+
+		setTimeout(() => {
+			setInterval(changeText, 1500);
+		}, text.length * typingDelay);
+	}
+
+	startAnimations();
+});

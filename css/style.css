@@ -1,3 +1,22 @@
+header {
+  height: 85vh;
+}
+
+#header-text {
+  width: 60%;
+}
+
+#title-image {
+  width: 120%;
+  height: 120%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.svg-curve path {
+  fill: #010101;
+}
+
 .slider-container {
   display: flex;
   justify-content: center;

@@ -8,39 +8,53 @@
 		<link rel="stylesheet" href="/css/style.css" />
 	</head>
 	<body>
-		<header class="header text-center position-relative">
+		<header class="header d-flex justify-content-center bg-dark">
 			<div
-				class="text-container position-relative d-flex flex-column justify-content-center align-items-center h-100"
+				class="text-container d-flex flex-row align-items-center justify-content-center h-100 mx-5"
+				id="header-text"
 			>
-				<h5 class="text-primary fs-3 fw-bold text-uppercase">Hello, World.</h5>
-				<h1 id="typing-text" class="display-1 fw-bold text-primary"></h1>
+				<div class="text-start">
+					<div class="d-flex flex-row">
+						<h1 class="display-3 text-light my-3">
+							<span id="typing-text" class="display-3 text-light"></span>
+						</h1>
+					</div>
 
-				<p class="roles text-primary text-uppercase fs-4">
-					<span>Frontend Web Developer</span>
-				</p>
-
-				<div class="social d-flex gap-3 position-absolute">
-					<a href="#">
-						<i class="fab fa-twitter fa-3x text-white"></i>
-					</a>
-					<a href="#">
-						<i class="fab fa-instagram fa-3x text-white"></i>
-					</a>
-					<a href="#">
-						<i class="fab fa-linkedin fa-3x text-white"></i>
-					</a>
-					<a href="#">
-						<i class="fab fa-facebook fa-3x text-white"></i>
-					</a>
-					<a href="#">
-						<i class="fab fa-youtube fa-3x text-white"></i>
-					</a>
-					<a href="#">
-						<i class="fab fa-github fa-3x text-white"></i>
-					</a>
+					<p class="roles fs-4 text-light text-start">
+						Frontend Developer. Fresh out of the tutorial phase, straight into
+						building. JavaScript, Bootstrap, CSS—I may not have “years of
+						experience,” but I do have Google, stubbornness, and a refusal to
+						write bad code.
+					</p>
+				</div>
+				<div>
+					<img src="/images/programmer.jpg" alt="" id="title-image" />
 				</div>
 			</div>
 		</header>
+		<svg
+			class="svg-curve"
+			viewBox="0 0 1440 79"
+			xmlns="http://www.w3.org/2000/svg"
+		>
+			<path d="M0 79C360 20 1080 20 1440 79V0H0V79Z" fill="blue"></path>
+		</svg>
+
+		<div
+			class="about d-flex flex-column align-items-center justify-content-center m-5"
+		>
+			<h1 class="display-3 text-primary text-dark my-3">About Me</h1>
+			<p class="roles fs-4 text-dark text-start">
+				I’m a front-end developer still in the “figuring things out” phase—but
+				that just means I’m learning fast and building even faster. I create
+				clean, functional, and actually nice-looking interfaces (no 2005-era
+				button gradients here). Sure, I don’t have decades of experience, but I
+				do have an unhealthy obsession with getting things right. Need a
+				front-end that works, looks great, and won’t make users question their
+				life choices? I’m your person.
+			</p>
+		</div>
+
 		<div class="slider-container">
 			<div class="slider">
 				<button class="prev">&#10094;</button>
