@@ -1,44 +1,68 @@
-// Works Carousel
+// Carusel Slider
 document.addEventListener('DOMContentLoaded', function () {
 	const track = document.querySelector('.slider-track');
-	const items = document.querySelectorAll('.slider-item');
+	const items = Array.from(document.querySelectorAll('.slider-item'));
 	const prev = document.querySelector('.prev');
 	const next = document.querySelector('.next');
-	const itemWidth = items[0].offsetWidth + 20;
+	const visibleItems = 4;
+	const totalItems = items.length;
+	const itemWidth = track.offsetWidth / visibleItems;
 
-	items.forEach((item) => {
-		track.appendChild(item.cloneNode(true));
-	});
+	let index = visibleItems;
 
-	let index = 0;
+	// Clone last 4 to the beginning
+	for (let i = totalItems - visibleItems; i < totalItems; i++) {
+		const clone = items[i].cloneNode(true);
+		track.prepend(clone);
+	}
+
+	// Clone first 4 to the end
+	for (let i = 0; i < visibleItems; i++) {
+		const clone = items[i].cloneNode(true);
+		track.appendChild(clone);
+	}
+
+	const allItems = document.querySelectorAll('.slider-item');
+	const totalClones = allItems.length;
+
+	// Set initial position
+	track.style.transform = `translateX(-${index * (100 / visibleItems)}%)`;
+
 	function moveCarousel() {
-		track.style.transition = 'transform 0.5s ease-in-out';
-		track.style.transform = `translateX(-${index * itemWidth}px)`;
+		track.style.transition = 'transform 0.5s ease';
+		track.style.transform = `translateX(-${index * (100 / visibleItems)}%)`;
 	}
 
 	next.addEventListener('click', () => {
+		if (index >= totalClones - visibleItems) return;
 		index++;
 		moveCarousel();
-		if (index >= items.length) {
+		if (index === totalItems + visibleItems) {
 			setTimeout(() => {
 				track.style.transition = 'none';
-				index = 0;
-				track.style.transform = `translateX(0px)`;
+				index = visibleItems;
+				track.style.transform = `translateX(-${index * (100 / visibleItems)}%)`;
 			}, 500);
 		}
 	});
 
 	prev.addEventListener('click', () => {
-		if (index <= 0) {
-			index = items.length;
-			track.style.transition = 'none';
-			track.style.transform = `translateX(-${index * itemWidth}px)`;
+		if (index <= 0) return;
+		index--;
+		moveCarousel();
+		if (index === 0) {
+			setTimeout(() => {
+				track.style.transition = 'none';
+				index = totalItems;
+				track.style.transform = `translateX(-${index * (100 / visibleItems)}%)`;
+			}, 500);
 		}
-		setTimeout(() => {
-			index--;
-			track.style.transition = 'transform 0.5s ease-in-out';
-			moveCarousel();
-		}, 10);
+	});
+
+	// Resize fix: set widths dynamically
+	window.addEventListener('resize', () => {
+		track.style.transition = 'none';
+		track.style.transform = `translateX(-${index * (100 / visibleItems)}%)`;
 	});
 });
 

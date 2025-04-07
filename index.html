@@ -8,6 +8,46 @@
 		<link rel="stylesheet" href="/css/style.css" />
 	</head>
 	<body>
+		<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#">Fixed navbar</a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarCollapse"
+					aria-controls="navbarCollapse"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarCollapse">
+					<ul class="navbar-nav me-auto mb-2 mb-md-0">
+						<li class="nav-item">
+							<a class="nav-link active" aria-current="page" href="#">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Link</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link disabled" aria-disabled="true">Disabled</a>
+						</li>
+					</ul>
+					<form class="d-flex" role="search">
+						<input
+							class="form-control me-2"
+							type="search"
+							placeholder="Search"
+							aria-label="Search"
+						/>
+						<button class="btn btn-outline-success" type="submit">
+							Search
+						</button>
+					</form>
+				</div>
+			</div>
+		</nav>
 		<header class="header d-flex justify-content-center bg-dark">
 			<div
 				class="text-container d-flex flex-row align-items-center justify-content-center h-100 mx-5"
@@ -55,18 +95,95 @@
 			</p>
 		</div>
 
-		<div class="slider-container">
+		<div class="slider-container d-flex flex-column align-items-center">
+			<h1 class="display-3 text-primary text-dark my-3">Works</h1>
 			<div class="slider">
 				<button class="prev">&#10094;</button>
 				<div class="slider-track">
-					<div class="slider-item" style="background-color: red"></div>
-					<div class="slider-item" style="background-color: blue"></div>
-					<div class="slider-item" style="background-color: green"></div>
-					<div class="slider-item" style="background-color: yellow"></div>
+					<div class="card slider-item">
+						<img src="..." class="card-img-top" alt="..." />
+						<div class="card-body">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">
+								Some quick example text to build on the card title and make up
+								the bulk of the card's content.
+							</p>
+							<a href="#" class="btn btn-primary">Go somewhere</a>
+						</div>
+					</div>
+					<div class="card slider-item">
+						<img src="..." class="card-img-top" alt="..." />
+						<div class="card-body">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">
+								Some quick example text to build on the card title and make up
+								the bulk of the card's content.
+							</p>
+							<a href="#" class="btn btn-primary">Go somewhere</a>
+						</div>
+					</div>
+					<div class="card slider-item">
+						<img src="..." class="card-img-top" alt="..." />
+						<div class="card-body">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">
+								Some quick example text to build on the card title and make up
+								the bulk of the card's content.
+							</p>
+							<a href="#" class="btn btn-primary">Go somewhere</a>
+						</div>
+					</div>
+					<div class="card slider-item">
+						<img src="..." class="card-img-top" alt="..." />
+						<div class="card-body">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">
+								Some quick example text to build on the card title and make up
+								the bulk of the card's content.
+							</p>
+							<a href="#" class="btn btn-primary">Go somewhere</a>
+						</div>
+					</div>
 				</div>
 				<button class="next">&#10095;</button>
 			</div>
 		</div>
+
+		<footer class="footer mt-auto py-3 bg-body-tertiary">
+			<div class="container">
+				<div
+					class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
+				>
+					<div class="col-md-4 d-flex align-items-center">
+						<a
+							href="/"
+							class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1"
+							aria-label="Bootstrap"
+						>
+							<svg class="bi" width="30" height="24" aria-hidden="true">
+								<use xlink:href="#bootstrap"></use>
+							</svg>
+						</a>
+						<span class="mb-3 mb-md-0 text-body-secondary"
+							>© 2025 Company, Inc</span
+						>
+					</div>
+
+					<ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+						<li class="ms-3">
+							<a class="text-body-secondary" href="#" aria-label="Instagram"
+								><svg class="bi" width="24" height="24" aria-hidden="true">
+									<use xlink:href="#instagram"></use></svg></a>
+						</li>
+						<li class="ms-3">
+							<a class="text-body-secondary" href="#" aria-label="Facebook"
+								><svg class="bi" width="24" height="24">
+									<use xlink:href="#facebook"></use></svg></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
 		<script src="../js/bootstrap.bundle.min.js"></script>
 		<script src="../js/script.js"></script>
 	</body>
