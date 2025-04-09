@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "gothic";
+  src: url("/fonts/Didact_Gothic/DidactGothic-Regular.ttf") format("truetype");
+}
+body {
+  font-family: "gothic";
+}
+
 header {
   height: 85vh;
 }
@@ -38,7 +46,6 @@ header {
 
 .slider-container .slider-item {
   min-width: 23%;
-  height: 350px;
   box-sizing: border-box;
   border-radius: 10px;
   margin-left: 1%;
