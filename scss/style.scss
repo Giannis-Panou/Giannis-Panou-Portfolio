@@ -1,5 +1,6 @@
 $primary: #66bdb7;
 $dark: #010101;
+$light: white;
 
 @font-face {
 	font-family: 'gothic';
@@ -27,6 +28,13 @@ header {
 
 .svg-curve path {
 	fill: $dark;
+}
+
+#morebtn {
+	margin-top: -20px;
+	width: 160px;
+	height: 50px;
+	font-size: 18px;
 }
 
 .slider-container {
@@ -77,4 +85,8 @@ header {
 
 .slider-container .next {
 	right: 10px;
+}
+
+footer {
+	margin-top: -2px;
 }
