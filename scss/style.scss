@@ -41,6 +41,10 @@ header {
 	padding-top: 75px;
 }
 
+#works {
+	padding-bottom: 95px;
+}
+
 .slider-container {
 	display: flex;
 	justify-content: center;
@@ -66,9 +70,26 @@ header {
 	border-radius: 10px;
 	margin-left: 1%;
 	margin-right: 1%;
-	transition: transform 0.5s ease-in-out, z-index 5s;
+	transition: transform 0.5s ease-in-out, z-index 1s;
 	transform-origin: center;
 	position: relative;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+	z-index: 0;
+}
+
+.slider-container .slider-item:hover {
+	transform: scale(1.4);
+	z-index: 10;
+}
+
+#work1:hover {
+	transform: scale(1.4) translateX(60px);
+	z-index: 10;
+}
+
+#work4:hover {
+	transform: scale(1.4) translateX(-60px);
+	z-index: 10;
 }
 
 .slider-container .prev,
@@ -81,9 +102,10 @@ header {
 	background: none;
 	padding: 10px 20px;
 	cursor: pointer;
-	font-size: 24px;
+	font-size: 30px;
 	z-index: 100;
 	height: 100%;
+	color: $light;
 }
 
 .slider-container .prev {

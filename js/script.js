@@ -1,4 +1,4 @@
-// Carusel Slider
+// Carousel Slider
 document.addEventListener('DOMContentLoaded', function () {
 	const track = document.querySelector('.slider-track');
 	const items = Array.from(document.querySelectorAll('.slider-item'));
@@ -107,24 +107,4 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 
 	startAnimations();
-});
-
-// Item Zoom Animation
-document.querySelectorAll('.slider-item').forEach((item) => {
-	item.addEventListener('mouseenter', () => {
-		item.style.zIndex = 10;
-		item.style.transition = 'transform 0.5s ease-in-out';
-		item.style.transform = 'scale(1.5)';
-	});
-
-	item.addEventListener('mouseleave', () => {
-		item.style.transform = 'scale(1)';
-
-		// Wait for the animation to finish before lowering z-index
-		const handleTransitionEnd = () => {
-			item.style.zIndex = '';
-			item.removeEventListener('transitionend', handleTransitionEnd);
-		};
-		item.addEventListener('transitionend', handleTransitionEnd);
-	});
 });
