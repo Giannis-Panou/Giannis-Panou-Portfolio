@@ -8,7 +8,8 @@
 		<link rel="stylesheet" href="/css/style.css" />
 	</head>
 	<body>
-		<nav class="navbar navbar-expand navbar-dark fixed-top bg-dark">
+		<nav class="navbar navbar-expand navbar-dark fixed-top bg-dark px-5">
+			<!-- <div class="col-1"></div> -->
 			<div class="container">
 				<div
 					class="collapse navbar-collapse d-flex justify-content-center"
@@ -18,17 +19,40 @@
 						class="navbar-nav w-100 mb-2 mb-md-0 d-flex justify-content-around align-items-center"
 					>
 						<li class="nav-item">
-							<a class="nav-link text-uppercase" href="#about">About</a>
+							<a
+								class="nav-link text-uppercase"
+								href="#about"
+								data-en="About"
+								data-gr="Προφίλ"
+								>About</a
+							>
 						</li>
 						<li>
-							<a class="nav-link text-white fs-3" href="#">Giannis_Panou</a>
+							<a
+								class="nav-link text-white fs-3"
+								href="#"
+								data-en="Giannis_Panou"
+								data-gr="Γιάννης_Πάνου"
+								>Giannis_Panou</a
+							>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link text-uppercase" href="#works">Works</a>
+							<a
+								class="nav-link text-uppercase"
+								href="#works"
+								data-en="Works"
+								data-gr="Πρότζεκτ"
+								>Works</a
+							>
 						</li>
 					</ul>
 				</div>
 			</div>
+			<!-- <div class="col-1">
+				<div class="d-flex justify-content-center align-items-center">
+					<button id="lang-toggle">GR</button>
+				</div>
+			</div> -->
 		</nav>
 		<header class="header d-flex justify-content-center bg-dark">
 			<div
@@ -42,9 +66,18 @@
 						</h1>
 					</div>
 
-					<p class="roles fs-4 text-light text-start">
+					<p
+						class="roles fs-4 text-light text-start"
+						data-en="Frontend Developer. Fresh out of the tutorial phase, straight into
+						building. JavaScript, Bootstrap, CSS. I may not have “years of
+						experience,” but I do have Google, stubbornness, and a refusal to
+						write bad code."
+						data-gr="Προγραμματιστής Frontend. Φρέσκος από την φάση του tutorial, κατευθείαν στην
+						κατασκευή. JavaScript, Bootstrap, CSS. Μπορεί να μην έχω “χρόνια εμπειρίας,” αλλά έχω 
+						Google, πείσμα και άρνηση να γράψω κακό κώδικα."
+					>
 						Frontend Developer. Fresh out of the tutorial phase, straight into
-						building. JavaScript, Bootstrap, CSS—I may not have “years of
+						building. JavaScript, Bootstrap, CSS. I may not have “years of
 						experience,” but I do have Google, stubbornness, and a refusal to
 						write bad code.
 					</p>
@@ -64,7 +97,12 @@
 
 		<div class="d-flex justify-content-center align-items-center">
 			<button class="btn border border-dark rounded-2" id="morebtn">
-				<a href="#about" class="text-decoration-none text-dark"
+				<a
+					href="#about"
+					class="text-decoration-none text-dark"
+					data-en="More About Me"
+					data-gr="Περισσότερα"
+				>
 					>More About Me</a
 				>
 			</button>
@@ -74,10 +112,30 @@
 			class="about d-flex flex-column align-items-center justify-content-center m-5"
 			id="about"
 		>
-			<h2 class="display-4 text-primary text-dark my-4 text-uppercase">
+			<h2
+				class="display-4 text-primary text-dark my-4 text-uppercase"
+				data-en="About Me"
+				data-gr="Προφίλ"
+			>
 				About Me
 			</h2>
-			<p class="roles fs-4 text-dark text-center">
+			<p
+				class="roles fs-4 text-dark text-center"
+				data-en="I’m a front-end developer still in the “figuring things out” phase—but
+				that just means I’m learning fast and building even faster. I create
+				clean, functional, and actually nice-looking interfaces (no 2005-era
+				button gradients here). Sure, I don’t have decades of experience, but I
+				do have an unhealthy obsession with getting things right. Need a
+				front-end that works, looks great, and won’t make users question their
+				life choices? I’m your person."
+				data-gr="Είμαι προγραμματιστής front-end που ακόμα βρίσκομαι στην φάση του 
+				“να τα βρω” - αλλά αυτό σημαίνει ότι μαθαίνω γρήγορα και χτίζω ακόμα πιο γρήγορα. 
+				Δημιουργώ καθαρά, λειτουργικά και πραγματικά ωραία interfaces (όχι 2005-era button 
+				gradients εδώ). Σίγουρα δεν έχω δεκαετίες εμπειρίας, αλλά έχω μια ανθυγιεινή εμμονή 
+				με το να κάνω τα πράγματα σωστά. Χρειάζεσαι ένα front-end που να λειτουργεί, να 
+				φαίνεται υπέροχο και να μην κάνει τους χρήστες να αναρωτιούνται για τις επιλογές 
+				τους στη ζωή; Είμαι ο άνθρωπός σου."
+			>
 				I’m a front-end developer still in the “figuring things out” phase—but
 				that just means I’m learning fast and building even faster. I create
 				clean, functional, and actually nice-looking interfaces (no 2005-era
@@ -91,13 +149,19 @@
 		<main
 			class="d-flex flex-column align-items-center justify-content-center m-5"
 		>
-			<h2 class="display-4 text-primary text-dark my-4 text-uppercase">
+			<h2
+				class="display-4 text-primary text-dark my-4 text-uppercase"
+				data-en="Skills"
+				data-gr="Δεξιότητες"
+			>
 				Skills
 			</h2>
 			<hr class="w-50" />
 			<ul class="d-flex flex-column w-100 align-items-center list-unstyled">
 				<div class="d-flex flex-column align-items-center my-2">
-					<h4 class="display-6">Main Stuff</h4>
+					<h4 class="display-6" data-en="Main Stuff" data-gr="Βασικά Προσόντα">
+						Main Stuff
+					</h4>
 					<li class="fs-4 text-dark">HTML</li>
 					<li class="fs-4 text-dark">CSS</li>
 					<li class="fs-4 text-dark">JavaScript</li>
@@ -105,7 +169,13 @@
 				<hr class="w-50" />
 				<div class="d-flex flex-column align-items-center my-2">
 					<div class="d-flex flex-column align-items-center">
-						<h4 class="display-6">Styling Essentials</h4>
+						<h4
+							class="display-6"
+							data-en="Styling Essentials"
+							data-gr="Απαραίτητες Γνώσεις Στυλ"
+						>
+							Styling Essentials
+						</h4>
 					</div>
 					<li class="fs-4 text-dark">Bootstrap</li>
 					<li class="fs-4 text-dark">SCSS</li>
@@ -113,7 +183,13 @@
 				<hr class="w-50" />
 				<div class="d-flex flex-column align-items-center my-2">
 					<div class="d-flex flex-column align-items-center">
-						<h4 class="display-6">Backend Things</h4>
+						<h4
+							class="display-6"
+							data-en="Backend Things"
+							data-gr="Backend Πράγματα"
+						>
+							Backend Things
+						</h4>
 					</div>
 					<li class="fs-4 text-dark">PHP</li>
 					<li class="fs-4 text-dark">mySQL</li>
@@ -126,7 +202,11 @@
 			class="slider-container d-flex flex-column align-items-center my-5"
 			id="works"
 		>
-			<h2 class="display-4 text-primary text-dark my-4 text-uppercase">
+			<h2
+				class="display-4 text-primary text-dark my-4 text-uppercase"
+				data-en="Works"
+				data-gr="Πρότζεκτ"
+			>
 				Works
 			</h2>
 			<div class="slider">
@@ -139,7 +219,13 @@
 							><img src="/images/ck_green.png" class="card-img-top" alt="..." />
 							<div class="card-body">
 								<h5 class="card-title">CK Photography</h5>
-								<p class="card-text">
+								<p
+									class="card-text"
+									data-en="An e-shop example for a photographer. Written in HTML/JS with
+									Bootstrap and SCSS styling."
+									data-gr="Ένα παράδειγμα e-shop για φωτογράφο. Γραμμένο σε HTML/JS με
+									Bootstrap και SCSS στυλ."
+								>
 									An e-shop example for a photographer. Written in HTML/JS with
 									Bootstrap and SCSS styling.
 								</p>
@@ -147,15 +233,24 @@
 						>
 					</div>
 					<div class="card slider-item" id="work2">
-						<img src="..." class="card-img-top" alt="..." />
-						<div class="card-body">
-							<h5 class="card-title">Card title</h5>
-							<p class="card-text">
-								Some quick example text to build on the card title and make up
-								the bulk of the card's content.
-							</p>
-							<a href="#" class="btn btn-primary">Go somewhere</a>
-						</div>
+						<a
+							href="https://flixxgp.netlify.app/"
+							class="text-decoration-none text-dark"
+							><img src="/images/flixx.png" class="card-img-top" alt="..." />
+							<div class="card-body">
+								<h5 class="card-title">Flixx</h5>
+								<p
+									class="card-text"
+									data-en="A Netflix Inspired Website. Works with the TMDB API to fetch
+									movies and series."
+									data-gr="Μια Ιστοσελίδα Εμπνευσμένη από το Netflix. Λειτουργεί με το 
+									API TMDB για να φέρει ταινίες και σειρές."
+								>
+									A Netflix Inspired Website. Works with the TMDB API to fetch
+									movies and series.
+								</p>
+							</div></a
+						>
 					</div>
 					<div class="card slider-item" id="work3">
 						<img src="..." class="card-img-top" alt="..." />

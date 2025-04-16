@@ -108,3 +108,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	startAnimations();
 });
+
+// Language Toggle
+// const toggleBtn = document.getElementById('lang-toggle');
+// let currentLang = 'en';
+
+// toggleBtn.addEventListener('click', () => {
+// 	currentLang = currentLang === 'en' ? 'gr' : 'en';
+// 	toggleBtn.textContent = currentLang === 'en' ? 'GR' : 'EN';
+
+// 	document.querySelectorAll('[data-en]').forEach((el) => {
+// 		el.textContent = el.getAttribute(`data-${currentLang}`);
+// 	});
+// });
