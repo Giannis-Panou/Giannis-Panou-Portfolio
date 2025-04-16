@@ -10,13 +10,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	let index = visibleItems;
 
-	// Clone last 4 to the beginning
 	for (let i = totalItems - visibleItems; i < totalItems; i++) {
 		const clone = items[i].cloneNode(true);
 		track.prepend(clone);
 	}
 
-	// Clone first 4 to the end
 	for (let i = 0; i < visibleItems; i++) {
 		const clone = items[i].cloneNode(true);
 		track.appendChild(clone);
@@ -25,7 +23,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	const allItems = document.querySelectorAll('.slider-item');
 	const totalClones = allItems.length;
 
-	// Set initial position
 	track.style.transform = `translateX(-${index * (100 / visibleItems)}%)`;
 
 	function moveCarousel() {
@@ -59,7 +56,6 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 	});
 
-	// Resize fix: set widths dynamically
 	window.addEventListener('resize', () => {
 		track.style.transition = 'none';
 		track.style.transform = `translateX(-${index * (100 / visibleItems)}%)`;
@@ -107,6 +103,25 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 
 	startAnimations();
+});
+
+// Move Animation
+document.addEventListener('DOMContentLoaded', function () {
+	const text = document.getElementById('intro');
+	const image = document.getElementById('title-image');
+
+	text.classList.add('MoveRight');
+	image.classList.add('MoveLeft');
+
+	setTimeout(() => {
+		text.classList.add('vibrate');
+		image.classList.add('vibrate');
+	}, 1000);
+
+	setTimeout(() => {
+		text.classList.add('OriginPosRight');
+		image.classList.add('OriginPosLeft');
+	}, 1400);
 });
 
 // Language Toggle
