@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	image.classList.add('MoveLeft');
 
 	setTimeout(() => {
-		text.classList.add('vibrate');
+		text.classList.add('vibrateReverse');
 		image.classList.add('vibrate');
 	}, 1000);
 
