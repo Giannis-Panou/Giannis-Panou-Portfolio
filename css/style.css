@@ -123,7 +123,7 @@ footer {
 
 @keyframes MoveRight {
   from {
-    transform: translateX(-2000px);
+    transform: translateX(-1500px);
   }
   to {
     transform: translateX(75px);
@@ -131,7 +131,7 @@ footer {
 }
 @-webkit-keyframes MoveRight {
   from {
-    transform: translateX(-2000px);
+    transform: translateX(-1500px);
   }
   to {
     transform: translateX(75px);
@@ -140,8 +140,8 @@ footer {
 .MoveRight {
   animation-name: MoveRight;
   -webkit-animation-name: MoveRight;
-  animation-duration: 1s;
-  -webkit-animation-duration: 1s;
+  animation-duration: 0.75s;
+  -webkit-animation-duration: 0.75s;
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
   animation-timing-function: linear;
@@ -150,7 +150,7 @@ footer {
 
 @keyframes MoveLeft {
   from {
-    transform: translateX(2000px);
+    transform: translateX(1500px);
   }
   to {
     transform: translateX(-75px);
@@ -158,7 +158,7 @@ footer {
 }
 @-webkit-keyframes MoveLeft {
   from {
-    transform: translateX(2000px);
+    transform: translateX(1500px);
   }
   to {
     transform: translateX(-75px);
@@ -167,8 +167,8 @@ footer {
 .MoveLeft {
   animation-name: MoveLeft;
   -webkit-animation-name: MoveLeft;
-  animation-duration: 1s;
-  -webkit-animation-duration: 1s;
+  animation-duration: 0.75s;
+  -webkit-animation-duration: 0.75s;
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
   animation-timing-function: linear;
@@ -194,8 +194,8 @@ footer {
 .OriginPosRight {
   animation-name: OriginPosRight;
   -webkit-animation-name: OriginPosRight;
-  animation-duration: 0.5s;
-  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.25s;
+  -webkit-animation-duration: 0.25s;
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
   animation-timing-function: linear;
@@ -221,8 +221,8 @@ footer {
 .OriginPosLeft {
   animation-name: OriginPosLeft;
   -webkit-animation-name: OriginPosLeft;
-  animation-duration: 0.5s;
-  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.25s;
+  -webkit-animation-duration: 0.25s;
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
   animation-timing-function: linear;
@@ -267,8 +267,8 @@ footer {
 .vibrate {
   animation-name: vibrate;
   -webkit-animation-name: vibrate;
-  animation-duration: 1s;
-  -webkit-animation-duration: 1s;
+  animation-duration: 0.75s;
+  -webkit-animation-duration: 0.75s;
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
   animation-timing-function: ease-out;
@@ -313,10 +313,29 @@ footer {
 .vibrateReverse {
   animation-name: vibrateReverse;
   -webkit-animation-name: vibrateReverse;
-  animation-duration: 1s;
-  -webkit-animation-duration: 1s;
+  animation-duration: 0.75s;
+  -webkit-animation-duration: 0.75s;
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
   animation-timing-function: ease-out;
   -webkit-animation-timing-function: ease-out;
+}
+
+@media (max-width: 768px) {
+  #header-text {
+    width: 100%;
+    text-align: center;
+  }
+  #title-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 2;
+  }
+  .slider-container .slider-item {
+    min-width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
 }

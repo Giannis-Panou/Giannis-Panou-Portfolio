@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		'Whatever.',
 	];
 	const text = "Hello there. I'm Giannis.";
-	const typingDelay = 50;
+	const typingDelay = 75;
 	let wordIndex = 0;
 
 	function typeText(text, element, delay) {
@@ -91,14 +91,14 @@ document.addEventListener('DOMContentLoaded', function () {
 		setTimeout(() => {
 			wordIndex = (wordIndex + 1) % words.length;
 			typingElement.textContent = staticText + words[wordIndex];
-		}, 500);
+		}, 750);
 	}
 
 	function startAnimations() {
 		typeText(text, typingElement, typingDelay);
 
 		setTimeout(() => {
-			setInterval(changeText, 1500);
+			setInterval(changeText, 1000);
 		}, text.length * typingDelay);
 	}
 
@@ -116,23 +116,10 @@ document.addEventListener('DOMContentLoaded', function () {
 	setTimeout(() => {
 		text.classList.add('vibrateReverse');
 		image.classList.add('vibrate');
-	}, 1000);
+	}, 750);
 
 	setTimeout(() => {
 		text.classList.add('OriginPosRight');
 		image.classList.add('OriginPosLeft');
-	}, 1400);
+	}, 1150);
 });
-
-// Language Toggle
-// const toggleBtn = document.getElementById('lang-toggle');
-// let currentLang = 'en';
-
-// toggleBtn.addEventListener('click', () => {
-// 	currentLang = currentLang === 'en' ? 'gr' : 'en';
-// 	toggleBtn.textContent = currentLang === 'en' ? 'GR' : 'EN';
-
-// 	document.querySelectorAll('[data-en]').forEach((el) => {
-// 		el.textContent = el.getAttribute(`data-${currentLang}`);
-// 	});
-// });
