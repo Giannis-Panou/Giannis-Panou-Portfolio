@@ -338,4 +338,7 @@ footer {
     margin-left: 5%;
     margin-right: 5%;
   }
+  #svg-header {
+    margin-top: -4px;
+  }
 }
