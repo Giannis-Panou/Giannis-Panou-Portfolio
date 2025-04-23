@@ -129,3 +129,11 @@ document.addEventListener('DOMContentLoaded', function () {
 		image.classList.add('OriginPosLeft');
 	}, 1150);
 });
+
+// Temp Picture Fix
+document.addEventListener('DOMContentLoaded', function () {
+	const image = document.getElementById('title-image');
+	setTimeout(() => {
+		image.classList.remove('d-none');
+	}, 1);
+});
