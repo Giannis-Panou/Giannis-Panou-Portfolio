@@ -51,6 +51,7 @@ header {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
 .slider-container .slider {
@@ -340,5 +341,19 @@ footer {
   }
   #svg-header {
     margin-top: -4px;
+  }
+  #morebtn {
+    display: none;
+  }
+  .slider-wrapper {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  .slider-track {
+    scroll-snap-align: center;
+  }
+  .slider-item {
+    scroll-snap-align: center;
   }
 }

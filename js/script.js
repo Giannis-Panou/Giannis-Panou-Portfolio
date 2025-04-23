@@ -1,66 +1,72 @@
 // Carousel Slider
-document.addEventListener('DOMContentLoaded', function () {
-	const track = document.querySelector('.slider-track');
-	const items = Array.from(document.querySelectorAll('.slider-item'));
-	const prev = document.querySelector('.prev');
-	const next = document.querySelector('.next');
-	const visibleItems = 4;
-	const totalItems = items.length;
-	const itemWidth = track.offsetWidth / visibleItems;
+if (window.innerWidth > 768) {
+	document.addEventListener('DOMContentLoaded', function () {
+		const track = document.querySelector('.slider-track');
+		const items = Array.from(document.querySelectorAll('.slider-item'));
+		const prev = document.querySelector('.prev');
+		const next = document.querySelector('.next');
+		const visibleItems = 4;
+		const totalItems = items.length;
+		const itemWidth = track.offsetWidth / visibleItems;
 
-	let index = visibleItems;
+		let index = visibleItems;
 
-	for (let i = totalItems - visibleItems; i < totalItems; i++) {
-		const clone = items[i].cloneNode(true);
-		track.prepend(clone);
-	}
-
-	for (let i = 0; i < visibleItems; i++) {
-		const clone = items[i].cloneNode(true);
-		track.appendChild(clone);
-	}
-
-	const allItems = document.querySelectorAll('.slider-item');
-	const totalClones = allItems.length;
-
-	track.style.transform = `translateX(-${index * (100 / visibleItems)}%)`;
-
-	function moveCarousel() {
-		track.style.transition = 'transform 0.5s ease';
-		track.style.transform = `translateX(-${index * (100 / visibleItems)}%)`;
-	}
-
-	next.addEventListener('click', () => {
-		if (index >= totalClones - visibleItems) return;
-		index++;
-		moveCarousel();
-		if (index === totalItems + visibleItems) {
-			setTimeout(() => {
-				track.style.transition = 'none';
-				index = visibleItems;
-				track.style.transform = `translateX(-${index * (100 / visibleItems)}%)`;
-			}, 500);
+		for (let i = totalItems - visibleItems; i < totalItems; i++) {
+			const clone = items[i].cloneNode(true);
+			track.prepend(clone);
 		}
-	});
 
-	prev.addEventListener('click', () => {
-		if (index <= 0) return;
-		index--;
-		moveCarousel();
-		if (index === 0) {
-			setTimeout(() => {
-				track.style.transition = 'none';
-				index = totalItems;
-				track.style.transform = `translateX(-${index * (100 / visibleItems)}%)`;
-			}, 500);
+		for (let i = 0; i < visibleItems; i++) {
+			const clone = items[i].cloneNode(true);
+			track.appendChild(clone);
 		}
-	});
 
-	window.addEventListener('resize', () => {
-		track.style.transition = 'none';
+		const allItems = document.querySelectorAll('.slider-item');
+		const totalClones = allItems.length;
+
 		track.style.transform = `translateX(-${index * (100 / visibleItems)}%)`;
+
+		function moveCarousel() {
+			track.style.transition = 'transform 0.5s ease';
+			track.style.transform = `translateX(-${index * (100 / visibleItems)}%)`;
+		}
+
+		next.addEventListener('click', () => {
+			if (index >= totalClones - visibleItems) return;
+			index++;
+			moveCarousel();
+			if (index === totalItems + visibleItems) {
+				setTimeout(() => {
+					track.style.transition = 'none';
+					index = visibleItems;
+					track.style.transform = `translateX(-${
+						index * (100 / visibleItems)
+					}%)`;
+				}, 500);
+			}
+		});
+
+		prev.addEventListener('click', () => {
+			if (index <= 0) return;
+			index--;
+			moveCarousel();
+			if (index === 0) {
+				setTimeout(() => {
+					track.style.transition = 'none';
+					index = totalItems;
+					track.style.transform = `translateX(-${
+						index * (100 / visibleItems)
+					}%)`;
+				}, 500);
+			}
+		});
+
+		window.addEventListener('resize', () => {
+			track.style.transition = 'none';
+			track.style.transform = `translateX(-${index * (100 / visibleItems)}%)`;
+		});
 	});
-});
+}
 
 // Title Animation
 document.addEventListener('DOMContentLoaded', function () {
