@@ -7,16 +7,17 @@ if (window.innerWidth > 768) {
 		const next = document.querySelector('.next');
 		const visibleItems = 4;
 		const totalItems = items.length;
-		const itemWidth = track.offsetWidth / visibleItems;
 
 		let index = visibleItems;
 
-		for (let i = totalItems - visibleItems; i < totalItems; i++) {
+		// Next Button
+		for (let i = 0; i < visibleItems; i++) {
 			const clone = items[i].cloneNode(true);
-			track.prepend(clone);
+			track.appendChild(clone);
 		}
 
-		for (let i = 0; i < visibleItems; i++) {
+		// Previous Button
+		for (let i = totalItems - visibleItems; i < totalItems; i++) {
 			const clone = items[i].cloneNode(true);
 			track.appendChild(clone);
 		}
