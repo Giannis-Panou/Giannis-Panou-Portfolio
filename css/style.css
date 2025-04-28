@@ -31,6 +31,10 @@ header {
   fill: #010101;
 }
 
+#svg-header {
+  margin-top: -1px;
+}
+
 #morebtn {
   margin-top: -20px;
   width: 160px;
