@@ -10,6 +10,7 @@ if (window.innerWidth > 768) {
 
 		let index = visibleItems;
 
+		// Clone items for infinite scrolling
 		// Next Button
 		for (let i = 0; i < visibleItems; i++) {
 			const clone = items[i].cloneNode(true);
@@ -25,13 +26,16 @@ if (window.innerWidth > 768) {
 		const allItems = document.querySelectorAll('.slider-item');
 		const totalClones = allItems.length;
 
+		// Set the width of the track to accommodate all items
 		track.style.transform = `translateX(-${index * (100 / visibleItems)}%)`;
 
+		// Set the width of each item to 100% divided by the number of visible items
 		function moveCarousel() {
 			track.style.transition = 'transform 0.5s ease';
 			track.style.transform = `translateX(-${index * (100 / visibleItems)}%)`;
 		}
 
+		// Listener for the next button
 		next.addEventListener('click', () => {
 			if (index >= totalClones - visibleItems) return;
 			index++;
@@ -47,6 +51,7 @@ if (window.innerWidth > 768) {
 			}
 		});
 
+		// Listener for the previous button
 		prev.addEventListener('click', () => {
 			if (index <= 0) return;
 			index--;
@@ -62,6 +67,7 @@ if (window.innerWidth > 768) {
 			}
 		});
 
+		// Listener for window resize to adjust the track position
 		window.addEventListener('resize', () => {
 			track.style.transition = 'none';
 			track.style.transform = `translateX(-${index * (100 / visibleItems)}%)`;
@@ -84,6 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	const typingDelay = 75;
 	let wordIndex = 0;
 
+	// Typewriter effect
 	function typeText(text, element, delay) {
 		for (let i = 0; i < text.length; i++) {
 			setTimeout(() => {
@@ -92,20 +99,22 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 	}
 
+	// Change text
 	function changeText() {
 		const staticText = "Hello there. I'm ";
 
 		setTimeout(() => {
 			wordIndex = (wordIndex + 1) % words.length;
 			typingElement.textContent = staticText + words[wordIndex];
-		}, 750);
+		}, 2000);
 	}
 
+	// Reset text
 	function startAnimations() {
 		typeText(text, typingElement, typingDelay);
 
 		setTimeout(() => {
-			setInterval(changeText, 1000);
+			setInterval(changeText, 1500);
 		}, text.length * typingDelay);
 	}
 
