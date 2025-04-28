@@ -395,6 +395,9 @@ footer {
     object-position: center;
     z-index: 2;
   }
+  #svg-header {
+    margin-top: 0px;
+  }
   #header-text {
     width: 100%;
   }
