@@ -5,6 +5,11 @@ const introTitle = document.getElementById('intro-title');
 
 function mobileView() {
 	if (windowSize.matches) {
+		const track = document.querySelector('.slider-track');
+		const ghost = document.createElement('div');
+		ghost.className = 'slider-item ghost';
+		track.appendChild(ghost);
+
 		header.classList.remove('flex-row');
 		header.classList.add('flex-column-reverse');
 		introText.classList.add('text-center');

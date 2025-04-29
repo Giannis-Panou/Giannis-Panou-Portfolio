@@ -345,6 +345,7 @@ footer {
     min-width: 90%;
     margin-left: 5%;
     margin-right: 5%;
+    scroll-snap-align: center;
   }
   .slider-wrapper {
     overflow-x: auto;
@@ -355,14 +356,19 @@ footer {
     scroll-snap-align: center;
     margin-bottom: 15px;
   }
-  .slider-item {
-    scroll-snap-align: center;
-  }
   .prev {
     display: none;
   }
   .next {
     display: none;
+  }
+  .slider-item.ghost {
+    min-width: 0.1%;
+    margin: 0;
+    pointer-events: none;
+    background: transparent;
+    box-shadow: none;
+    scroll-snap-align: none;
   }
 }
 @media (max-width: 375px) {
