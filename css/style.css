@@ -83,21 +83,20 @@ header {
   z-index: 0;
 }
 
-.slider-container .slider-item:hover {
-  transform: scale(1.4);
-  z-index: 10;
+@media (hover: hover) and (pointer: fine) {
+  .slider-container .slider-item:hover {
+    transform: scale(1.4);
+    z-index: 10;
+  }
+  #work1:hover {
+    transform: scale(1.4) translateX(60px);
+    z-index: 10;
+  }
+  #work4:hover {
+    transform: scale(1.4) translateX(-60px);
+    z-index: 10;
+  }
 }
-
-#work1:hover {
-  transform: scale(1.4) translateX(60px);
-  z-index: 10;
-}
-
-#work4:hover {
-  transform: scale(1.4) translateX(-60px);
-  z-index: 10;
-}
-
 .slider-container .prev,
 .slider-container .next {
   position: absolute;
@@ -116,10 +115,12 @@ header {
 
 .slider-container .prev {
   left: 10px;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
 }
 
 .slider-container .next {
   right: 10px;
+  text-shadow: -1px 1px 5px rgba(0, 0, 0, 0.8);
 }
 
 footer {

@@ -88,19 +88,22 @@ header {
 	z-index: 0;
 }
 
-.slider-container .slider-item:hover {
-	transform: scale(1.4);
-	z-index: 10;
-}
+// Zoom Effect
+@media (hover: hover) and (pointer: fine) {
+	.slider-container .slider-item:hover {
+		transform: scale(1.4);
+		z-index: 10;
+	}
 
-#work1:hover {
-	transform: scale(1.4) translateX(60px);
-	z-index: 10;
-}
+	#work1:hover {
+		transform: scale(1.4) translateX(60px);
+		z-index: 10;
+	}
 
-#work4:hover {
-	transform: scale(1.4) translateX(-60px);
-	z-index: 10;
+	#work4:hover {
+		transform: scale(1.4) translateX(-60px);
+		z-index: 10;
+	}
 }
 
 .slider-container .prev,
@@ -121,10 +124,12 @@ header {
 
 .slider-container .prev {
 	left: 10px;
+	text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
 }
 
 .slider-container .next {
 	right: 10px;
+	text-shadow: -1px 1px 5px rgba(0, 0, 0, 0.8);
 }
 
 footer {
@@ -373,22 +378,6 @@ footer {
 		object-fit: cover;
 		object-position: center;
 		z-index: 2;
-	}
-
-	#work1:hover {
-		transform: none;
-	}
-
-	#work2:hover {
-		transform: none;
-	}
-
-	#work3:hover {
-		transform: none;
-	}
-
-	#work4:hover {
-		transform: none;
 	}
 
 	.slider-container .slider-item {
