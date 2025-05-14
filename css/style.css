@@ -35,19 +35,46 @@ header {
   margin-top: -1px;
 }
 
-#morebtn {
-  margin-top: -20px;
-  width: 160px;
-  height: 50px;
-  font-size: 18px;
+#about {
+  margin-top: 30px;
+  z-index: 10;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 20px;
+  width: 80%;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37); /* softer, more spread shadow */
+  padding: 3rem 2rem;
+  transition: all 0.3s ease;
 }
 
-#about {
-  padding-top: 75px;
+#skills {
+  z-index: 10;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 20px;
+  width: 80%;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37); /* softer, more spread shadow */
+  padding: 3rem 2rem;
+  transition: all 0.3s ease;
 }
 
 #works {
   padding-bottom: 95px;
+  z-index: 10;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 20px;
+  width: 80%;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37); /* softer, more spread shadow */
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  transition: all 0.3s ease;
 }
 
 .slider-container {
@@ -91,6 +118,83 @@ header {
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
   object-fit: cover;
+}
+
+.main-content {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Shared base styling for both ribbons */
+.c64-rainbow-lines {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  width: 100%;
+  height: 200px;
+}
+
+.c64-lines {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transform: rotate(-45deg);
+  filter: blur(1.5px);
+}
+
+/* Line colors */
+.line {
+  width: 100%;
+  height: 25px;
+  border-radius: 1rem;
+}
+
+.red {
+  background: #ff3c3c;
+  width: 105%;
+}
+
+.orange {
+  background: #ff9900;
+  width: 106.5%;
+}
+
+.yellow {
+  background: #ffee00;
+  width: 108%;
+}
+
+.green {
+  background: #33cc33;
+  width: 109.5%;
+}
+
+.light-blue {
+  background: #66ccff;
+  width: 111%;
+}
+
+.dark-blue {
+  background: #0033cc;
+  width: 112.5%;
+}
+
+/* Top Left Ribbon */
+.c64-rainbow-lines.top-left {
+  top: 47%;
+  left: 0%;
+  transform: translate(-50%, -50%);
+}
+
+/* Bottom Right Ribbon */
+.c64-rainbow-lines.bottom-right {
+  bottom: 50%;
+  right: 0%;
+  transform: translate(50%, 50%) rotate(180deg);
 }
 
 @media (hover: hover) and (pointer: fine) {
