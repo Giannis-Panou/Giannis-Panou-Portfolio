@@ -65,7 +65,7 @@
 						id="image-div"
 					>
 						<img
-							src="/images/programmer.jpg"
+							src="/images/programmer.png"
 							class="animated d-none"
 							id="title-image"
 						/>
@@ -83,143 +83,159 @@
 			</svg>
 		</div>
 
-		<div
-			class="about d-flex flex-column align-items-center justify-content-center mx-5"
-			id="about"
+		<!-- MAIN SECTION -->
+		<section
+			class="main-content position-relative overflow-hidden d-flex flex-column align-items-center"
 		>
-			<h2 class="display-4 text-primary text-dark my-4 text-uppercase">
-				About Me
-			</h2>
-			<p class="roles fs-4 text-dark text-center">
-				My name is Giannis and i'm from Thessaloniki, Greece. I like to say that
-				i am a front-end developer. I have a passion for creating clean and
-				functional websites that provide a great user experience. If you want a
-				guy who knows how to center a div, you are in the right place. I am
-				self-taught and also a student at IEK Delta 360 in Thessaloniki since
-				2023.
-			</p>
-		</div>
+			<div
+				class="d-flex align-items-stretch justify-content-center mb-5"
+				id="about-skills"
+			>
+				<div
+					class="about d-flex flex-column align-items-center justify-content-center"
+					id="about"
+				>
+					<h2 class="display-4 text-primary text-dark mb-4 text-uppercase">
+						About Me
+					</h2>
+					<p class="roles fs-4 text-dark text-center">
+						My name is Giannis and i'm from Thessaloniki, Greece. I like to say
+						that i am a front-end developer. I have a passion for creating clean
+						and functional websites that provide a great user experience. If you
+						want a guy who knows how to center a div, you are in the right
+						place. I am self-taught and also a student at IEK Delta 360 in
+						Thessaloniki since 2023.
+					</p>
+				</div>
 
-		<main
-			class="d-flex flex-column align-items-center justify-content-center m-5"
-		>
-			<h2 class="display-4 text-primary text-dark my-4 text-uppercase">
-				Skills
-			</h2>
-			<hr class="w-50" />
-			<ul class="d-flex flex-column w-100 align-items-center list-unstyled">
-				<div class="d-flex flex-column align-items-center my-2">
-					<h4 class="display-6">Main Stuff</h4>
-					<li class="fs-4 text-dark">HTML</li>
-					<li class="fs-4 text-dark">CSS</li>
-					<li class="fs-4 text-dark">JavaScript</li>
-				</div>
-				<hr class="w-50" />
-				<div class="d-flex flex-column align-items-center my-2">
-					<div class="d-flex flex-column align-items-center">
-						<h4 class="display-6">Styling Essentials</h4>
-					</div>
-					<li class="fs-4 text-dark">Bootstrap</li>
-					<li class="fs-4 text-dark">SCSS</li>
-				</div>
-				<hr class="w-50" />
-				<div class="d-flex flex-column align-items-center my-2">
-					<div class="d-flex flex-column align-items-center">
-						<h4 class="display-6">Backend Things</h4>
-					</div>
-					<li class="fs-4 text-dark">PHP</li>
-					<li class="fs-4 text-dark">mySQL</li>
-				</div>
-			</ul>
-			<hr class="w-50" />
-		</main>
+				<div
+					class="d-flex flex-column align-items-center justify-content-center"
+					id="skills"
+				>
+					<h2
+						class="display-4 text-primary text-center text-dark mb-4 text-uppercase"
+					>
+						Skills
+					</h2>
 
-		<div
-			class="slider-container d-flex flex-column justify-content-around align-items-center my-5"
-			id="works"
-		>
-			<h2 class="display-4 text-primary text-dark my-4 text-uppercase">
-				Projects
-			</h2>
-			<div class="slider" data-bs-touch="true">
-				<button class="prev">&#10094;</button>
-				<div class="slider-wrapper">
-					<div class="slider-track">
-						<div class="card slider-item" id="work1">
-							<a
-								href="https://ckphotography.netlify.app/"
-								class="text-decoration-none text-dark"
-								><img
-									src="/images/ck_green.webp"
-									class="card-img-top"
-									alt="..."
-								/>
-								<div class="card-body">
-									<h5 class="card-title">CK Photography</h5>
-									<p class="card-text">
-										An e-shop example for a photographer. Written in HTML/JS
-										with Bootstrap and SCSS styling.
-									</p>
-								</div></a
-							>
-						</div>
-						<div class="card slider-item" id="work2">
-							<a
-								href="https://flixxgp.netlify.app/"
-								class="text-decoration-none text-dark"
-								><img src="/images/flixx.webp" class="card-img-top" alt="..." />
-								<div class="card-body">
-									<h5 class="card-title">Flixx</h5>
-									<p class="card-text">
-										A Netflix Inspired Website. Works with the TMDB API to fetch
-										movies and series.
-									</p>
-								</div></a
-							>
-						</div>
-						<div class="card slider-item" id="work3">
-							<a
-								href="https://autoleaderboard.netlify.app/"
-								class="text-decoration-none text-dark"
-							>
-								<img
-									src="/images/auto-leaderboard.webp"
-									class="card-img-top"
-									alt="..."
-								/>
-								<div class="card-body">
-									<h5 class="card-title">Auto Leaderboard</h5>
-									<p class="card-text">
-										A web app for racing games. It uses csv files to fetch data,
-										applies points to the players and displays it in a table.
-									</p>
-								</div>
-							</a>
-						</div>
-						<div class="card slider-item" id="work4">
-							<a
-								href="https://shoppinglistgp.netlify.app/"
-								class="text-decoration-none text-dark"
-							>
-								<img
-									src="/images/shopping-list.webp"
-									class="card-img-top"
-									alt="..."
-								/>
-								<div class="card-body">
-									<h5 class="card-title">Shopping List</h5>
-									<p class="card-text">
-										Add items, edit items, remove items, send it to someone
-										else. It uses local storage to save the data.
-									</p>
-								</div>
-							</a>
-						</div>
-					</div>
+					<ul
+						class="d-flex justify-content-around list-unstyled"
+						id="skills-list"
+					>
+						<li class="d-flex flex-column text-center gap-2">
+							<span class="display-6 li-title">Main</span>
+							<span class="fs-4 text-dark">HTML5</span>
+							<span class="fs-4 text-dark">CSS3</span>
+							<span class="fs-4 text-dark">JavaScript</span>
+						</li>
+
+						<li class="d-flex flex-column text-center gap-2">
+							<span class="display-6 li-title">Styling</span>
+							<span class="fs-4 text-dark">Bootstrap5</span>
+							<span class="fs-4 text-dark">SCSS</span>
+						</li>
+
+						<li class="d-flex flex-column text-center gap-2">
+							<span class="display-6 li-title">Backend</span>
+							<span class="fs-4 text-dark">PHP</span>
+							<span class="fs-4 text-dark">mySQL</span>
+						</li>
+					</ul>
 				</div>
-				<button class="next">&#10095;</button>
 			</div>
-		</div>
+
+			<div
+				class="slider-container d-flex flex-column justify-content-around align-items-center mb-5"
+				id="works"
+			>
+				<h2 class="display-4 text-primary text-dark mb-4 text-uppercase">
+					Projects
+				</h2>
+				<div class="slider" data-bs-touch="true">
+					<button class="prev">&#10094;</button>
+					<div class="slider-wrapper">
+						<div class="slider-track">
+							<div class="card slider-item" id="work1">
+								<a
+									href="https://ckphotography.netlify.app/"
+									class="text-decoration-none text-dark"
+									><img
+										src="/images/ck_green.png"
+										class="card-img-top"
+										alt="..."
+									/>
+									<div class="card-body">
+										<h5 class="card-title">CK Photography</h5>
+										<p class="card-text">
+											An e-shop example for a photographer. Written in HTML/JS
+											with Bootstrap and SCSS styling.
+										</p>
+									</div></a
+								>
+							</div>
+							<div class="card slider-item" id="work2">
+								<a
+									href="https://flixxgp.netlify.app/"
+									class="text-decoration-none text-dark"
+									><img
+										src="/images/flixx.png"
+										class="card-img-top"
+										alt="..."
+									/>
+									<div class="card-body">
+										<h5 class="card-title">Flixx</h5>
+										<p class="card-text">
+											A Netflix Inspired Website. Works with the TMDB API to
+											fetch movies and series.
+										</p>
+									</div></a
+								>
+							</div>
+							<div class="card slider-item" id="work3">
+								<a
+									href="https://autoleaderboard.netlify.app/"
+									class="text-decoration-none text-dark"
+								>
+									<img
+										src="/images/auto-leaderboard.png"
+										class="card-img-top"
+										alt="..."
+									/>
+									<div class="card-body">
+										<h5 class="card-title">Auto Leaderboard</h5>
+										<p class="card-text">
+											A web app for racing games. It uses csv files to fetch
+											data, applies points to the players and displays it in a
+											table.
+										</p>
+									</div>
+								</a>
+							</div>
+							<div class="card slider-item" id="work4">
+								<a
+									href="https://shoppinglistgp.netlify.app/"
+									class="text-decoration-none text-dark"
+								>
+									<img
+										src="/images/shopping-list.png"
+										class="card-img-top"
+										alt="..."
+									/>
+									<div class="card-body">
+										<h5 class="card-title">Shopping List</h5>
+										<p class="card-text">
+											Add items, edit items, remove items, send it to someone
+											else. It uses local storage to save the data.
+										</p>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<button class="next">&#10095;</button>
+				</div>
+			</div>
+		</section>
 
 		<svg
 			class="svg-curve border-bottom border-dark"
