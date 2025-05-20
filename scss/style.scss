@@ -82,14 +82,13 @@ header {
 	transition: all 0.3s ease;
 	min-height: 300px;
 	flex: 1;
-	
 }
 
 #skills-list {
-		flex-direction: row;
-		gap: 5rem;
-		margin-left: 2rem;
-	}
+	flex-direction: row;
+	gap: 5rem;
+	margin-left: 2rem;
+}
 
 #works {
 	z-index: 10;
@@ -128,11 +127,7 @@ header {
 }
 
 .slider-item {
-	background: linear-gradient(
-		135deg,
-		rgba(255, 255, 255, 0.1),
-		rgba(255, 255, 255, 0)
-	);
+	background: rgba(255, 255, 255, 0.25);
 	backdrop-filter: blur(20px);
 	-webkit-backdrop-filter: blur(20px);
 	min-width: 23%;
@@ -595,7 +590,6 @@ footer {
 		object-position: center;
 		z-index: 2;
 	}
-
 
 	#skills-list {
 		flex-direction: column;
