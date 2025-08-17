@@ -18,9 +18,10 @@ if (window.innerWidth > 768) {
 		}
 
 		// Previous Button
-		for (let i = totalItems - visibleItems; i < totalItems; i++) {
-			const clone = items[i].cloneNode(true);
-			track.appendChild(clone);
+		for (let i = 0; i < visibleItems; i++) {
+			const reverseIndex = totalItems - 1 - i;
+			const clone = items[reverseIndex].cloneNode(true);
+			track.insertBefore(clone, track.firstChild);
 		}
 
 		const allItems = document.querySelectorAll('.slider-item');
